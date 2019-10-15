@@ -1,7 +1,4 @@
-# Calculador de densidad de campo magnetico & corriente
-# Para los calculos se parte del analisis de los circuitos magneticos los 
-# cuales siguen normas similares a la leyes de Kirchoff para voltajes y
-# corrientes.
+# Simulator of magnetic circuit to create variable magnetic field gradients at small scale
 # Ivan Rulik - Uniandes
 # 22/04/19
 import matplotlib.pyplot as plt
@@ -12,8 +9,6 @@ import sys
 import os
 
 from matplotlib.patches import Rectangle
-
-from PIL import Image
 
 os.system("cls")
 
@@ -35,14 +30,6 @@ if(order == 'Y'):
     plt.ylabel('example dim [mm]')
     plt.legend(['wc','w, da ',None,'g, wg',None])
     plt.show(block=False)
-    #aux guide to ingress values
-    aux_gd = input('Show auxiliar help?: [Y/N]:')
-    if(aux_gd == 'Y'):
-        dir = os.path.dirname(os.path.realpath(__file__))
-        im = Image.open(dir + "\dimensiones.jpg")
-        im.rotate(-90).show()
-    elif(aux_gd == 'N'):
-        None
     else:
         print('Wrong input, taking it as N') 
     #user_input
